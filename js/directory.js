@@ -1,22 +1,3 @@
-const correct = [];
-const incorrect = [];
-const answers = [];
-
-// 2. Store the number of questions answered correctly
-let correctAnswers = 0;
-//next challenge **enter a positive message for none missed
-for ( let i = 0; i < quesAndAnswer.length; i++ ) {
-  let question = quesAndAnswer[i][0];
-  let answer = quesAndAnswer[i][1];
-  let response = prompt(`${question}`);
-  answers.push(answer);
-  if (response.includes(answer)){
-    correctAnswers++;
-    correct.push(question);
-  } else{
-    incorrect.push(question);
-  }
-}
 
   function createListItems( arr ) {
   let items = '';
@@ -25,18 +6,18 @@ for ( let i = 0; i < quesAndAnswer.length; i++ ) {
   }
   return items;
 }
-let html = `<h1>You got ${correctAnswers} answer(s) correct. </h1>
+let html = `<h1> ${correctAnswers} answer(s) were correct. </h1>
 
-<h2>You got these correct:</h2>
+<h2>These were answered correctly:</h2>
   <ol>
     ${createListItems(correct)} <br>
   </ol>
-<h2>You missed these:</h2>
+<h2>These were missed:</h2>
   <ol>
     ${createListItems(incorrect)} <br>
   </ol>
 
-  <h2>The correct answers, in order of appearance, are :</h2>
+  <h2>The correct answers, in order of appearance, are:</h2>
   <ol>
   ${createListItems(answers)}<br>
   </ol>

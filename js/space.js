@@ -25,29 +25,3 @@ for ( let i = 0; i < quesAndAnswer.length; i++ ) {
     incorrect.push(question);
   }
 }
-
-  function createListItems( arr ) {
-  let items = '';
-  for ( let i = 0; i < arr.length; i++ ) {
-    items += `<li>${ arr[i] }</li>`;
-  }
-  return items;
-}
-let html = `<h1>You got ${correctAnswers} answer(s) correct. </h1>
-
-<h2>You got these correct:</h2>
-  <ol>
-    ${createListItems(correct)} <br>
-  </ol>
-<h2>You missed these:</h2>
-  <ol>
-    ${createListItems(incorrect)} <br>
-  </ol>
-
-  <h2>The correct answers, in order of appearance, are :</h2>
-  <ol>
-  ${createListItems(answers)}<br>
-  </ol>
-`;
-// 4. Display the number of correct answers to the user
-document.querySelector('main').innerHTML = html;
